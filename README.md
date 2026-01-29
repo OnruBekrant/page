@@ -1,73 +1,65 @@
-# React + TypeScript + Vite
+# React Authentication & Dashboard Uygulaması
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, React, Vite ve TypeScript kullanılarak geliştirilmiş modern bir oturum açma (Login) ve yönetim paneli (Dashboard) uygulamasıdır. `react-router-dom` ile sayfa yönlendirmeleri yapılmış ve `localStorage` kullanılarak basit bir kimlik doğrulama (Authentication) simülasyonu oluşturulmuştur.
 
-Currently, two official plugins are available:
+## 🚀 Özellikler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Hızlı ve Modern:** Vite ve TypeScript altyapısı.
+- **Güvenli Yönlendirme:** Giriş yapılmadan Dashboard sayfasına erişim engellenir (Protected Route).
+- **Oturum Yönetimi:** Sayfa yenilendiğinde oturumun korunması için `localStorage` entegrasyonu.
+- **Kullanıcı Deneyimi:** Şifre göster/gizle özelliği ve hatalı giriş uyarıları.
+- **Responsive Tasarım:** Temiz ve modern CSS yapısı.
 
-## React Compiler
+## 🛠 Kullanılan Teknolojiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Vite
+- React Router DOM
+- CSS3
 
-## Expanding the ESLint configuration
+## 📂 Proje Dosya Yapısı
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+    src/
+    ├── assets/
+    ├── pages/
+    │   ├── Dashboard.tsx  (Yönetim Paneli)
+    │   └── Login.tsx      (Giriş Sayfası)
+    ├── styles/
+    │   ├── App.css        (Genel Ayarlar)
+    │   ├── Dashboard.css  (Panel Stilleri)
+    │   ├── index.css      (Global Reset & Dark Mode)
+    │   └── Login.css      (Giriş Formu Stilleri)
+    ├── App.tsx            (Routing Yapısı)
+    └── main.tsx           (Giriş Noktası)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ⚙️ Kurulum ve Çalıştırma
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyin.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Projeyi klonlayın veya indirin:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+    git clone [https://github.com/kullanici-adi/proje-adi.git](https://github.com/kullanici-adi/proje-adi.git)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2. Proje klasörüne gidin:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+    cd proje-adi
+
+3. Gerekli bağımlılıkları (node_modules) yükleyin:
+
+    npm install
+
+4. Uygulamayı başlatın:
+
+    npm run dev
+
+## 🔐 Giriş Bilgileri (Demo)
+
+Uygulama demo modunda olduğu için aşağıdaki sabit bilgileri kullanarak giriş yapabilirsiniz:
+
+- **Kullanıcı Adı:** admin
+- **Şifre:** 12345
+
+## 📝 Lisans
+
+Bu proje açık kaynaklıdır ve eğitim amaçlı hazırlanmıştır.
