@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import '../styles/Login.css'; // CSS import edildi
+
 
 function Login() {
     const [passIsVisible, setpassIsVisible] = useState(false);
